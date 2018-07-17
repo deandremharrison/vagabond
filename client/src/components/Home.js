@@ -9,7 +9,7 @@ export default class Home extends Component {
             <div>
                 <Hero />
                 <center>
-                    <h1>"Share Your Experiences"</h1>
+                    <h1>Share Your Experiences</h1>
                 </center>
                 <CityGallery />
             </div>

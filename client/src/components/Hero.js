@@ -25,7 +25,7 @@ export default class Hero extends Component {
     render() {
         return (
         <this.styledHero>
-            <p>"Special Places For Special People"</p>
+            <p>Special Places For Special People</p>
         </this.styledHero>
         )
   }
