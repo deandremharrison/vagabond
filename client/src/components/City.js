@@ -8,16 +8,14 @@ export default class City extends Component {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 48vw;
+        width: 50vw;
         height: 24vw;
-        margin: 0 1vw 2vh 1vw;
+        margin: 0 auto 2vh auto;
         
 
         img {
             width: 100%;
             height: 85%;
-            /* border: 1px solid black; */
-            /* box-shadow: 0 0 2px black; */
             border-radius: 3px;
         }
 
@@ -26,13 +24,9 @@ export default class City extends Component {
             font-size: 20px
         }
 
-        /* @media screen and (min-width: 450px) {
-            width: 45vw;
-        } */
-
         @media screen and (min-width: 780px) {
-            width: 31vw;
-            margin: 0 1vw 2vh 1vw;
+            width: 28vw;
+            margin: 0 0 2vh 0;
             p {
                 font-size: calc(4px + 2vw);
             }

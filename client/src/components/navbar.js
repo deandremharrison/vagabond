@@ -17,10 +17,12 @@ export default class Navbar extends Component {
       text-decoration: none;
       padding: 0 1vw;
       font-size: calc(14px + 1vw);
+      color: black;
     }
 
-    h1 {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+    h1{
+      font-size: calc(12px + 3vw);
+      margin: 1vh 0;
     }
   `
   render() {
