@@ -10,7 +10,6 @@ export default class Navbar extends Component {
   StyledNavbar = styled.div`
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
     align-items: center;
     padding: 0 2vw 0 2vw;
 
