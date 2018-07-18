@@ -11,7 +11,7 @@ export default class HomePage extends Component {
                 <center>
                     <h1>Share Your Experiences</h1>
                 </center>
-                <CityGallery />
+                <CityGallery history={this.props.history}/>
             </div>
         )
     }

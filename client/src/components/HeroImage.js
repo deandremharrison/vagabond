@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import road from "../media/road.mp4"
 
 
-export default class Hero extends Component {
+export default class HeroImage extends Component {
     styledHero = styled.div`
         margin: 0 auto 5vw auto;
         width: 100%;
@@ -24,9 +24,7 @@ export default class Hero extends Component {
     render() {
         return (
         <this.styledHero>
-            <video width="100%" autoPlay>
-                <source src={road} type="video/mp4"/>
-            </video>
+            <img src={this.props.imageUrl} alt="skyline"/>
         </this.styledHero>
         )
   }
