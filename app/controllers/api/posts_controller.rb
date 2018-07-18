@@ -1,6 +1,7 @@
 class Api::PostsController < ApplicationController
     def index
     @posts = User.find(params[:user_id]).posts
+    @posts = City.find(params[:city_id]).posts
     render json: @posts
   end
 
@@ -9,8 +10,14 @@ class Api::PostsController < ApplicationController
     render json: @post
   end
 
+# dont know if i needed to put a .create command for both user AND city since post belongs to both.
+
   def create
     @user = User.find(params[:user_id])
+    @user = City.find(params[:city_id])
+    #dont know if we need line 19---------
+    @post = @city.posts.create(post_params)
+    #dont know if we need line 19---------
     @post = @user.posts.create(post_params)
     render json: @post
   end
