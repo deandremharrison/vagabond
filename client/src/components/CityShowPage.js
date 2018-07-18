@@ -17,7 +17,7 @@ export default class CityShowPage extends Component {
 
     fetchCityPosts = async () => {
         const res = await axios.get(`/api/cities/${this.props.match.params.cityId}/posts`)
-        this.setState({posts: res.data})
+        this.setState({ posts: res.data })
     }
 
     componentDidMount = () => {
