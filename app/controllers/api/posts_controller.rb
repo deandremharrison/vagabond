@@ -12,31 +12,31 @@ class Api::PostsController < ApplicationController
     def index
         @posts = parent_finder.posts
         render json: @posts
-      end
-    
-      def show
+    end
+
+    def show
         @post = Post.find(params[:id])
         render json: @post
-      end
-    
-      def create
-      end
-    
-      def update
+    end
+
+    def create
+        parent_finder.posts.create(post_params)
+    end
+
+    def update
         @post= Post.find(params[:id])
         @post.update(post_params)
         render json: @post
-      end
-    
-      def destroy
+    end
+
+    def destroy
         @post = Post.find(params[:id]).destroy
         render status: :ok
-        puts "post destroyed"
-      end
-    
-      private
-    
-      def post_params
-        params.require(:post).permit(:title, :body)
-      end
+    end
+
+    private
+
+    def post_params
+    params.require(:post).permit(:title, :body, :user_id)
+    end
 end
