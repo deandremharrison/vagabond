@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Hero from './Hero';
 import CityGallery from './CityGallery';
 
-export default class Home extends Component {
+export default class HomePage extends Component {
 
     render() {
         return (
@@ -11,7 +11,7 @@ export default class Home extends Component {
                 <center>
                     <h1>Share Your Experiences</h1>
                 </center>
-                <CityGallery />
+                <CityGallery history={this.props.history}/>
             </div>
         )
     }

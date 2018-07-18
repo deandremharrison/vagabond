@@ -21,6 +21,7 @@ class Api::PostsController < ApplicationController
 
     def create
         parent_finder.posts.create(post_params)
+        render status: :ok
     end
 
     def update

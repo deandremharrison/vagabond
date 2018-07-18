@@ -32,9 +32,13 @@ export default class City extends Component {
             }
         }
     `
+
+    sendToCityShow = () => {
+        this.props.history.push(`/cities/${this.props.city.id}`)
+    }
     render() {
         return (
-            <this.StyledCity>
+            <this.StyledCity onClick={this.sendToCityShow}>
                 <img src={this.props.city.image_url} alt="some stuff" />
                 <p>{this.props.city.name}</p>
             </this.StyledCity>
