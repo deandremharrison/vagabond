@@ -17,7 +17,7 @@ class Api::UsersController < ApplicationController
     def update
         @user = User.find(params[:id])
         @user.update!(user_params)
-        render json: @artist
+        render json: @user
     end
 
     def destroy
