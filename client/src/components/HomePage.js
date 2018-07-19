@@ -18,7 +18,7 @@ export default class HomePage extends Component {
             <div>
                 <Hero />
                 <StyledSectionHeader>
-                    <h1>Share Your Adventure</h1>
+                    <h1>Adventures</h1>
                 </StyledSectionHeader>
                 <CityGallery history={this.props.history} />
             </div>

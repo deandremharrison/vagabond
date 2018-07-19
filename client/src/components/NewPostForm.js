@@ -37,6 +37,7 @@ export default class NewPostForm extends Component {
             border-bottom: 1px solid black;
             font-size: 20px;
             flex-grow: 1;
+            outline: none;
         }
         button {
             width: 90px;
