@@ -6,44 +6,7 @@ export default class PostsGallery extends Component {
 
     StyledPostGallery = styled.div`
     width: 90vw;
-    border: solid blue;
-
-    .parentDiv {
-        width: 85vw;
-        height:40vh;
-        border: solid red;
-        display: flex;
-    }
-
-    .reviewDiv {
-        width: 70vw;
-        border: solid green;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .imgDiv img{
-        width: 20vw;
-        border: solid yellow;
-    }
-
-    button{
-        width: 5vw;
-        border-radius: 25px;
-        margin: 1em;
-    }
-
-    .subjectP{
-        border: solid purple;
-        width: 60vw;
-    }
-
-    .descriptionP{
-        border: solid orange;
-        width: 60vw;
-        height: 40vh;
-    }
+    // border: solid blue;
     `
     render() {
         const posts = this.props.posts.map((post, i) => {
