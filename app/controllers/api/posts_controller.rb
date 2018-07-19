@@ -20,6 +20,7 @@ class Api::PostsController < ApplicationController
     end
 
     def create
+        
         parent_finder.posts.create(post_params)
         render status: :ok
     end
@@ -38,7 +39,7 @@ class Api::PostsController < ApplicationController
     private
 
     def post_params
-        @user_id = User.find_by(name: params[:name]).id
+        # @user_id = User.find_by(name: params[:name]).id
         params.require(:post).permit(:title, :body, :user_id)
     end
 end

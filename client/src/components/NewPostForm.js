@@ -8,7 +8,7 @@ export default class NewPostForm extends Component {
         post: {
             title: '',
             body: '',
-            name: ''
+            user_id: 18
         }
     }
 
