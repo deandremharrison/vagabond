@@ -38,6 +38,7 @@ class Api::PostsController < ApplicationController
     private
 
     def post_params
-    params.require(:post).permit(:title, :body, :user_id)
+        @user_id = User.find_by(name: params[:name]).id
+        params.require(:post).permit(:title, :body, :user_id)
     end
 end

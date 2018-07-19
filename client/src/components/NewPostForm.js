@@ -8,7 +8,7 @@ export default class NewPostForm extends Component {
         post: {
             title: '',
             body: '',
-            user_id: 18
+            name: ''
         }
     }
 
@@ -70,6 +70,13 @@ export default class NewPostForm extends Component {
     render() {
         return (
             <this.StyledPostForm>
+                <this.StyledFormRow>
+                    <label htmlFor="name">Name:</label>
+                    <input onChange={this.formChangeHandler}
+                        type="text"
+                        name="name"
+                        value={this.state.post.name} />
+                </this.StyledFormRow>
                 <this.StyledFormRow>
                     <label htmlFor="title">Title:</label>
                     <input onChange={this.formChangeHandler}
