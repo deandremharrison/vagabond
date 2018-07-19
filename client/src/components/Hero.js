@@ -38,7 +38,7 @@ export default class Hero extends Component {
 
         return (
             <StyledHero>
-                <video width="100%" autoPlay loop>
+                <video width="100%" autoPlay loop muted>
                     <source src={road} type="video/mp4" />
                 </video>
                 <StyledTextContainer>

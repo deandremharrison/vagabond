@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 export default class PostCard extends Component {
-
+    state = {
+        showDeleteModal: false
+    }
     StyledPostCard = styled.div`
+    position: relative;
     .parentDiv {
         width: 85vw;
         height:40vh;
@@ -59,7 +62,22 @@ export default class PostCard extends Component {
         this.props.history.push(`/users/${this.userId}/posts/new`)
     }
 
+    toggleModal = () => {
+        console.log('toggle clicked')
+        this.setState({ showDeleteModal: !this.state.showDeleteModal})
+    }
+
     render() {
+        const StyledDeleteModal = styled.div`
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40%;
+            height: 50%;
+            backgroud-color: blue;
+            z-index: 2;
+        `
+
         return (
             <this.StyledPostCard>
                 {/* <p>show something</p>
@@ -80,8 +98,11 @@ export default class PostCard extends Component {
                 </div>
                 <div className="buttonDiv">
                     <button className="editButton">Edit Post</button>
-                    <button className="deleteButton">Delete Post</button>
+                    <button onClick={this.toggleModal} className="deleteButton">Delete Post</button>
                 </div>
+                {this.state.showDeleteModal
+                    ? <StyledDeleteModal>wtf</StyledDeleteModal>
+                    : null}
             </this.StyledPostCard>
         )
     }
