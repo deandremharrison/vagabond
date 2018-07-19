@@ -7,6 +7,9 @@ export default class PostsGallery extends Component {
     StyledPostGallery = styled.div`
     width: 90vw;
     // border: solid blue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     `
     render() {
         const posts = this.props.posts.map((post, i) => {
