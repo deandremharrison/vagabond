@@ -15,6 +15,7 @@ class App extends Component {
     const CityShowPageComponent = (props) => <CityShowPage {...props} />
     const ProfilePageComponent = (props) => <ProfilePage {...props} />
     const PostPageComponent = (props) => <PostPage {...props} />
+    const NewPostPageComponent = (props) => <NewPostPage {...props} />
     return (
       <Router>
         <div>
@@ -22,8 +23,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/cities/:cityId" render={CityShowPageComponent} />
             <Route exact path="/users/:userId" render={ProfilePageComponent} />
+            <Route exact path="/users/:userId/posts/new" render={NewPostPageComponent} />
             <Route exact path="/users/:userId/posts/:postId" render={PostPageComponent} />
-            <Route exact path="/users/:userId/posts/new" component={NewPostPage} />
             <Route exact path="/" component={HomePage} />
           </Switch>
         </div>

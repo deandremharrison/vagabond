@@ -13,7 +13,7 @@ export default class NewPostPage extends Component {
     render() {
         return (
             <this.StyledPostPage>
-                <NewPostForm />
+                <NewPostForm history={this.props.history}/>
             </this.StyledPostPage>
         )
     }

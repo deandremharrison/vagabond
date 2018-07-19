@@ -8,7 +8,7 @@ export default class NewPostForm extends Component {
         post: {
             title: '',
             body: '',
-            user_id: ''
+            user_id: 18
         }
     }
 
@@ -56,12 +56,14 @@ export default class NewPostForm extends Component {
         }
     `
     postRequest = async() => {
-        const response = await axios.post(`/api/cities/${this.props.city_id}/posts`, this.state.post)
+        // const response = await axios.post(`/api/cities/${this.props.city_id}/posts`, this.state.post)
+        const response = await axios.post(`/api/cities/20/posts`, this.state.post)
         return response
     }
     submitPost = () => {
         this.postRequest()
-        this.props.history.push(`/cities/${this.props.city_id}`)
+        // this.props.history.push(`/cities/${this.props.city_id}`)
+        this.props.history.push(`/cities/20`)
     }
 
     render() {
