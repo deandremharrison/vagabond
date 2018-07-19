@@ -58,6 +58,7 @@ export default class PostCard extends Component {
     `
 
 
+
     sendToPostEdit = () => {
         this.props.history.push(`/users/${this.userId}/posts/new`)
     }
@@ -68,15 +69,6 @@ export default class PostCard extends Component {
     }
 
     render() {
-        const StyledDeleteModal = styled.div`
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 40%;
-            height: 50%;
-            backgroud-color: blue;
-            z-index: 2;
-        `
 
         return (
             <this.StyledPostCard>
@@ -104,6 +96,10 @@ export default class PostCard extends Component {
                     ? <StyledDeleteModal>wtf</StyledDeleteModal>
                     : null}
             </this.StyledPostCard>
+
+            
         )
     }
 }
+
+
