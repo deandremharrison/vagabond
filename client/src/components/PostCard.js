@@ -68,6 +68,10 @@ export default class PostCard extends Component {
         this.setState({ showDeleteModal: !this.state.showDeleteModal})
     }
 
+    sendToPostPage = () => {
+        this.props.history.push(`/users/${this.props.post.user_id}/posts/${this.props.post.id}`)
+    }
+
     render() {
 
         return (
@@ -83,7 +87,7 @@ export default class PostCard extends Component {
                     </div>
                     <div className="reviewDiv">
 
-                        <p className="subjectP">{this.props.post.title}</p>
+                        <p onClick={this.sendToPostPage} className="subjectP">{this.props.post.title}</p>
 
                         <p className="descriptionP">{this.props.post.body}</p>
                     </div>
@@ -92,9 +96,6 @@ export default class PostCard extends Component {
                     <button className="editButton">Edit Post</button>
                     <button onClick={this.toggleModal} className="deleteButton">Delete Post</button>
                 </div>
-                {this.state.showDeleteModal
-                    ? <StyledDeleteModal>wtf</StyledDeleteModal>
-                    : null}
             </this.StyledPostCard>
 
             
