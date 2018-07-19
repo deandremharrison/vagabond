@@ -12,7 +12,6 @@ import PostPage from './components/PostPage';
 class App extends Component {
 
   render() {
-
     const CityShowPageComponent = (props) => <CityShowPage {...props} />
     const ProfilePageComponent = (props) => <ProfilePage {...props} />
     const PostPageComponent = (props) => <PostPage {...props} />
@@ -21,10 +20,9 @@ class App extends Component {
         <div>
           <Navbar />
           <Switch>
-
-            <Route exact path="/users/:userId/posts/:postId" render={PostPageComponent} />
-            <Route exact path="/users/:userId" render={ProfilePageComponent} />
             <Route exact path="/cities/:cityId" render={CityShowPageComponent} />
+            <Route exact path="/users/:userId" render={ProfilePageComponent} />
+            <Route exact path="/users/:userId/posts/:postId" render={PostPageComponent} />
             <Route exact path="/users/:userId/posts/new" component={NewPostPage} />
             <Route exact path="/" component={HomePage} />
           </Switch>

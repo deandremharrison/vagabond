@@ -18,6 +18,10 @@ new_york = City.create(name: "New York", image_url: "https://images.musement.com
 
 new_orleans = City.create(name: "New Orleans", image_url: "https://photonews247.com/wp-content/uploads/2015/11/Walgreens-Drugs-C-opened-24-hours-at-900-Canal-Street-New-Orleans-LA.jpg", state: "Louisana", country: "USA" )
 
+philly = City.create(name: "Philadelphia", image_url: "https://www.phillymag.com/wp-content/uploads/sites/3/2014/03/rocky.jpg", state: "Pennsylvania", country: "USA")
+
+portland = City.create(name: "Portland", image_url: "https://www.portlandoregon.gov/shared/cfm/image.cfm?id=628547", state: "Oregon", country: "USA")
+
 andrew = User.create(name: "Andrew", password: "password", profile_pic: "https://www.law.berkeley.edu/wp-content/uploads/2015/04/Blank-profile.png
 ")
 
@@ -30,6 +34,22 @@ jordan = User.create(name: "Jordan", password: "pinkunicorn", profile_pic: "http
 dre = User.create(name: "Dre", password: "rugrats", profile_pic: "https://www.law.berkeley.edu/wp-content/uploads/2015/04/Blank-profile.png
 ")
 
+
+Post.create(user_id: andrew.id, city_id: new_york.id, title: "Unique New York", body: "new york is pretty cool, ya know?")
+
+Post.create(user_id: andrew.id, city_id: new_york.id, title: "Unique New York", body: "new york is pretty cool, ya know?")
+
+Post.create(user_id: andrew.id, city_id: new_york.id, title: "Unique New York", body: "new york is pretty cool, ya know?")
+
+Post.create(user_id: andrew.id, city_id: new_york.id, title: "Unique New York", body: "new york is pretty cool, ya know?")
+
+Post.create(user_id: andrew.id, city_id: new_york.id, title: "Unique New York", body: "new york is pretty cool, ya know?")
+
+Post.create(user_id: andrew.id, city_id: new_york.id, title: "Unique New York", body: "new york is pretty cool, ya know?")
+
+Post.create(user_id: andrew.id, city_id: new_york.id, title: "Unique New York", body: "new york is pretty cool, ya know?")
+
+Post.create(user_id: andrew.id, city_id: new_york.id, title: "Unique New York", body: "new york is pretty cool, ya know?")
 
 Post.create(user_id: andrew.id, city_id: new_york.id, title: "Unique New York", body: "new york is pretty cool, ya know?")
 
