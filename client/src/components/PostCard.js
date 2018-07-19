@@ -32,7 +32,7 @@ export default class PostCard extends Component {
     }
 
     Button{
-        width: 4vw;
+        width: 60px;
         border-radius: 25px;
         margin: 1em;
         outline: none;

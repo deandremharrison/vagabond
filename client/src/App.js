@@ -23,7 +23,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/cities/:cityId" render={CityShowPageComponent} />
             <Route exact path="/users/:userId" render={ProfilePageComponent} />
-            <Route exact path="/users/:userId/posts/new" render={NewPostPageComponent} />
+            <Route exact path="/cities/:cityId/posts/new" render={NewPostPageComponent} />
             <Route exact path="/users/:userId/posts/:postId" render={PostPageComponent} />
             <Route exact path="/" component={HomePage} />
           </Switch>

@@ -4,6 +4,7 @@ import axios from 'axios'
 export default class PostPage extends Component {
 
     state = {
+        user: {},
         post: {}
     }
 
@@ -12,8 +13,20 @@ export default class PostPage extends Component {
         this.setState({ post: res.data})
     }
 
+    fetchUserData = async () => {
+        const res = await axios.get(`/api/users/${this.props.match.params.userId}`)
+        const user = res.data
+        return user
+    }
+
+    saveUserData= async () => {
+        const user = await this.fetchUserData()
+        this.setState({ user })
+    }
+
     componentDidMount = () => {
         this.fetchPostData()
+        this.saveUserData()
     }
     render() {
         return (

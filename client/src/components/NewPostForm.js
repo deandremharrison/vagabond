@@ -71,6 +71,13 @@ export default class NewPostForm extends Component {
         return (
             <this.StyledPostForm>
                 <this.StyledFormRow>
+                    <label htmlFor="name">Name:</label>
+                    <input onChange={this.formChangeHandler}
+                        type="text"
+                        name="name"
+                        value={this.state.post.name} />
+                </this.StyledFormRow>
+                <this.StyledFormRow>
                     <label htmlFor="title">Title:</label>
                     <input onChange={this.formChangeHandler}
                         type="text"
