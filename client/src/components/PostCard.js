@@ -7,7 +7,7 @@ export default class PostCard extends Component {
     .parentDiv {
         width: 85vw;
         height:40vh;
-        border: solid red;
+        border: solid;
         display: flex;
     }
 
@@ -26,11 +26,16 @@ export default class PostCard extends Component {
         margin: 20px;
         
     }
+    .buttonDiv{
+        float: right;
+        margin-right: 100px;
+    }
 
-    button{
-        width: 5vw;
+    Button{
+        width: 4vw;
         border-radius: 25px;
         margin: 1em;
+        outline: none;
     }
 
     .subjectP{
@@ -46,10 +51,7 @@ export default class PostCard extends Component {
         height: 40vh;
     }
 
-    .buttonDiv{
-        float: right;
-        margin-right: 100px;
-    }
+
     `
 
 
@@ -65,20 +67,20 @@ export default class PostCard extends Component {
 
 
 
-                        <div className="parentDiv">
+                <div className="parentDiv">
                     <div className="imgDiv">
                         <img src="https://cdn0.iconfinder.com/data/icons/handsome-man-avatars/283/stock_man_avatar-16-512.png" />
                     </div>
                     <div className="reviewDiv">
-                               
+
                         <p className="subjectP">{this.props.post.title}</p>
-                                
+
                         <p className="descriptionP">{this.props.post.body}</p>
                     </div>
                 </div>
                 <div className="buttonDiv">
-                <button>first button</button>
-                <button>second button</button>
+                    <button className="editButton">Edit Post</button>
+                    <button className="deleteButton">Delete Post</button>
                 </div>
             </this.StyledPostCard>
         )
