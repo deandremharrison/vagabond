@@ -55,11 +55,14 @@ export default class PostCard extends Component {
     `
 
 
+
     sendToPostEdit = () => {
         this.props.history.push(`/users/${this.userId}/posts/new`)
     }
 
     render() {
+
+
         return (
             <this.StyledPostCard>
                 {/* <p>show something</p>
@@ -83,6 +86,10 @@ export default class PostCard extends Component {
                     <button className="deleteButton">Delete Post</button>
                 </div>
             </this.StyledPostCard>
+
+            
         )
     }
 }
+
+
